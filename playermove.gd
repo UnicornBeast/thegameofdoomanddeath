@@ -1,7 +1,7 @@
 extends Node2D
 
 
-var point1 = Vector2(0,648/2)
+@export var point1 = Vector2(-60,648/2)
 var color = Color.LIGHT_GRAY
 var width = 2
 
