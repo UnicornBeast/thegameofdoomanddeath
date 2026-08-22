@@ -1,14 +1,36 @@
 extends Node2D
 
+@export var shipSpeed = 25
+@export var bulletSpeed = 175
+@onready var bulletSprite = $Enemy/EnemyBullet/BulletSprite
+@onready var bullet = $Enemy/EnemyBullet
+@onready var shipSprite = $Enemy/Ship/ShipSprite
+@onready var ship = $Enemy/Ship
+@onready var bulletSpace = $BulletRemoval/BulletSpace
+var is_alive = true
+var third_quarterhealth = false
+var half_health = false
+var first_quarterhealth = false
+var doBullet = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
 
+#shoot a bullet from the enemy side
+func _bullet() -> void:
+	bulletSprite.visible = true
+	bullet.position.x -= bulletSpeed*get_process_delta_time()
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	queue_redraw()
+	ship.position.x -= shipSpeed*delta
+	if Input.is_action_just_pressed("BulletTest"):
+		doBullet = true
+	if doBullet:
+		_bullet()
 	
 #Gets input events.
 func _input(event):
@@ -16,6 +38,12 @@ func _input(event):
 	if event.is_action_pressed("damagetest") and player.alive:
 		player.damage()
 	
+
+func _on_bullet_removal_area_entered(area: Area2D) -> void:
+		doBullet = false
+		bulletSprite.visible = false
+		bullet.global_position = ship.global_position
+		
 #Draws any extra bits and pieces
 func _draw():
 	var player = get_node("Node2D/Player")

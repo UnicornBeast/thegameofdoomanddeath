@@ -1,26 +1,37 @@
 [gd_scene format=3 uid="uid://3msoo3nke7i7"]
 
 [ext_resource type="Script" uid="uid://j1nggkfc8df5" path="res://main_level.gd" id="1_4hor2"]
-[ext_resource type="Script" uid="uid://bbakx70weaemv" path="res://enemy.gd" id="1_lv0yf"]
 [ext_resource type="Texture2D" uid="uid://djdirmlwxxyci" path="res://assets/mrman.png" id="1_ovsph"]
+[ext_resource type="Texture2D" uid="uid://c17ayyg6gathl" path="res://icon.svg" id="3_4hor2"]
 [ext_resource type="PackedScene" uid="uid://b1v8dkmu0x1vh" path="res://player.tscn" id="3_yv4n1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0hv8a"]
-size = Vector2(59.5, 56)
+size = Vector2(72, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tadfv"]
+size = Vector2(12, 15)
 
 [node name="Node2D" type="Node2D" unique_id=1856286965]
 script = ExtResource("1_4hor2")
 
 [node name="Enemy" type="Area2D" parent="." unique_id=1257465173]
-script = ExtResource("1_lv0yf")
 
-[node name="Sprite2D" type="Sprite2D" parent="Enemy" unique_id=690863159]
-position = Vector2(844.00006, 350)
+[node name="Ship" type="CollisionShape2D" parent="Enemy" unique_id=1363294304]
+position = Vector2(843, 349)
+shape = SubResource("RectangleShape2D_0hv8a")
+
+[node name="ShipSprite" type="Sprite2D" parent="Enemy/Ship" unique_id=690863159]
+position = Vector2(1.000061, 1)
 scale = Vector2(1.874998, 1.7500002)
 texture = ExtResource("1_ovsph")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy" unique_id=1363294304]
-position = Vector2(844.3928, 349.94025)
-shape = SubResource("RectangleShape2D_0hv8a")
+[node name="EnemyBullet" type="CollisionShape2D" parent="Enemy" unique_id=1181584573]
+position = Vector2(806, 349)
+shape = SubResource("RectangleShape2D_tadfv")
+
+[node name="BulletSprite" type="Sprite2D" parent="Enemy/EnemyBullet" unique_id=1578441714]
+position = Vector2(-0.24993896, 0.125)
+scale = Vector2(0.12890609, 0.15429679)
+texture = ExtResource("3_4hor2")
 
 [node name="Node2D" parent="." unique_id=1958953829 instance=ExtResource("3_yv4n1")]
