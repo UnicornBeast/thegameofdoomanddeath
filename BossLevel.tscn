@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://0gxhgj7458wo"]
+
+[ext_resource type="Script" uid="uid://dag4vwotyek3b" path="res://boss_level.gd" id="1_ajhvs"]
+[ext_resource type="PackedScene" uid="uid://b1v8dkmu0x1vh" path="res://player.tscn" id="1_m1xy8"]
+[ext_resource type="Texture2D" uid="uid://djdirmlwxxyci" path="res://assets/mrman.png" id="2_6v8pq"]
+[ext_resource type="Texture2D" uid="uid://c17ayyg6gathl" path="res://icon.svg" id="3_0twmt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_prt80"]
+size = Vector2(72, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p84dd"]
+size = Vector2(12, 15)
+
+[node name="Node2D" type="Node2D" unique_id=205000795]
+script = ExtResource("1_ajhvs")
+
+[node name="Enemy" type="Area2D" parent="." unique_id=269710926]
+
+[node name="Ship" type="CollisionShape2D" parent="Enemy" unique_id=1916513912]
+position = Vector2(895, 94)
+shape = SubResource("RectangleShape2D_prt80")
+
+[node name="ShipSprite" type="Sprite2D" parent="Enemy/Ship" unique_id=1012997021]
+position = Vector2(1.000061, 1)
+scale = Vector2(1.874998, 1.7500002)
+texture = ExtResource("2_6v8pq")
+
+[node name="EnemyBullet" type="CollisionShape2D" parent="Enemy" unique_id=1027403405]
+position = Vector2(858, 94)
+shape = SubResource("RectangleShape2D_p84dd")
+
+[node name="BulletSprite" type="Sprite2D" parent="Enemy/EnemyBullet" unique_id=1253726405]
+position = Vector2(-0.24993896, 0.125)
+scale = Vector2(0.12890609, 0.15429679)
+texture = ExtResource("3_0twmt")
+
+[node name="Node2D" parent="." unique_id=1958953829 instance=ExtResource("1_m1xy8")]
+
+[node name="Enemy2" type="Area2D" parent="." unique_id=1902019149]
+
+[node name="Ship" type="CollisionShape2D" parent="Enemy2" unique_id=1503055853]
+position = Vector2(861.25, 543.875)
+shape = SubResource("RectangleShape2D_prt80")
+
+[node name="ShipSprite" type="Sprite2D" parent="Enemy2/Ship" unique_id=1913178551]
+position = Vector2(1.000061, 1)
+scale = Vector2(1.874998, 1.7500002)
+texture = ExtResource("2_6v8pq")
+
+[node name="EnemyBullet" type="CollisionShape2D" parent="Enemy2" unique_id=1538877717]
+position = Vector2(858, 94)
+shape = SubResource("RectangleShape2D_p84dd")
+
+[node name="BulletSprite" type="Sprite2D" parent="Enemy2/EnemyBullet" unique_id=502990925]
+position = Vector2(-40.75, 447.875)
+scale = Vector2(0.12890609, 0.15429679)
+texture = ExtResource("3_0twmt")
+
+[node name="Timer" type="Timer" parent="." unique_id=34831001]
+wait_time = 3.409
+autostart = true
+
+[node name="Timer2" type="Timer" parent="." unique_id=2016893033]
+wait_time = 2.229
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]
