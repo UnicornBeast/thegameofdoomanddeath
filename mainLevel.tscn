@@ -30,6 +30,7 @@ position = Vector2(806, 349)
 shape = SubResource("RectangleShape2D_tadfv")
 
 [node name="BulletSprite" type="Sprite2D" parent="Enemy/EnemyBullet" unique_id=1578441714]
+visible = false
 position = Vector2(-0.24993896, 0.125)
 scale = Vector2(0.12890609, 0.15429679)
 texture = ExtResource("3_4hor2")

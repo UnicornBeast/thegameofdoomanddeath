@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://qvqg88sxuhmh"]
+
+[ext_resource type="Texture2D" uid="uid://ukgt62587cn3" path="res://assets/Imcookinanditsageesenbo.png" id="1_i26rj"]
+
+[node name="Node2D" type="Node2D" unique_id=1685822894]
+
+[node name="Imcookinanditsageesenbo" type="Sprite2D" parent="." unique_id=1842011688]
+position = Vector2(578.5, 321)
+scale = Vector2(2.4104166, 2.6916666)
+texture = ExtResource("1_i26rj")
+
+[node name="LevelSelector" type="Button" parent="." unique_id=16672955]
+offset_left = 391.0
+offset_top = 330.0
+offset_right = 756.0
+offset_bottom = 386.0
+text = "Level Selector"
+
+[node name="Credits" type="Button" parent="." unique_id=722181677]
+offset_left = 498.0
+offset_top = 426.0
+offset_right = 652.0
+offset_bottom = 476.0
+text = "Credits"
+
+[node name="Label" type="Label" parent="." unique_id=284247264]
+offset_left = 493.0
+offset_top = 231.0
+offset_right = 591.0
+offset_bottom = 254.0
+text = "HyperDroids"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1493630491]
