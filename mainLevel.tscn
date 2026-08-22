@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://3msoo3nke7i7"]
 
-[ext_resource type="Script" uid="uid://d1vx0wlbe1bc3" path="res://enemy.gd" id="1_lv0yf"]
+[ext_resource type="Script" uid="uid://bbakx70weaemv" path="res://enemy.gd" id="1_lv0yf"]
 [ext_resource type="Texture2D" uid="uid://djdirmlwxxyci" path="res://assets/mrman.png" id="1_ovsph"]
+[ext_resource type="PackedScene" uid="uid://b1v8dkmu0x1vh" path="res://player.tscn" id="3_yv4n1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0hv8a"]
 size = Vector2(59.5, 56)
@@ -19,3 +20,5 @@ texture = ExtResource("1_ovsph")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy" unique_id=1363294304]
 position = Vector2(844.3928, 349.94025)
 shape = SubResource("RectangleShape2D_0hv8a")
+
+[node name="Node2D" parent="." unique_id=1958953829 instance=ExtResource("3_yv4n1")]
