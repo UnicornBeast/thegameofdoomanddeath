@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://j1nggkfc8df5" path="res://main_level.gd" id="1_4hor2"]
 [ext_resource type="Texture2D" uid="uid://djdirmlwxxyci" path="res://assets/mrman.png" id="1_ovsph"]
+[ext_resource type="Texture2D" uid="uid://ukgt62587cn3" path="res://assets/Imcookinanditsageesenbo.png" id="2_qg288"]
 [ext_resource type="Texture2D" uid="uid://c17ayyg6gathl" path="res://icon.svg" id="3_4hor2"]
 [ext_resource type="PackedScene" uid="uid://b1v8dkmu0x1vh" path="res://player.tscn" id="3_yv4n1"]
 
@@ -13,6 +14,11 @@ size = Vector2(12, 15)
 
 [node name="Node2D" type="Node2D" unique_id=1856286965]
 script = ExtResource("1_4hor2")
+
+[node name="Imcookinanditsageesenbo" type="Sprite2D" parent="." unique_id=1273964475]
+position = Vector2(562.5, 322)
+scale = Vector2(2.4104166, 2.7083333)
+texture = ExtResource("2_qg288")
 
 [node name="Enemy" type="Area2D" parent="." unique_id=1257465173]
 

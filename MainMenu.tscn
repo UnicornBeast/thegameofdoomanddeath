@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://qvqg88sxuhmh"]
 
+[ext_resource type="Script" uid="uid://wl4kf4yqduu4" path="res://main_menu.gd" id="1_eiy7p"]
 [ext_resource type="Texture2D" uid="uid://ukgt62587cn3" path="res://assets/Imcookinanditsageesenbo.png" id="1_i26rj"]
 
 [node name="Node2D" type="Node2D" unique_id=1685822894]
+script = ExtResource("1_eiy7p")
 
 [node name="Imcookinanditsageesenbo" type="Sprite2D" parent="." unique_id=1842011688]
 position = Vector2(578.5, 321)
@@ -31,3 +33,5 @@ offset_bottom = 254.0
 text = "HyperDroids"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1493630491]
+
+[connection signal="pressed" from="Credits" to="." method="_on_credits_pressed"]

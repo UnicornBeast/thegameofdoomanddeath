@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://5q0f0cl54cwx"]
+
+[ext_resource type="Script" uid="uid://cixa7c8h0d8mn" path="res://Credits.gd" id="1_4qwwl"]
+[ext_resource type="Texture2D" uid="uid://ukgt62587cn3" path="res://assets/Imcookinanditsageesenbo.png" id="2_obosj"]
+
+[node name="Node2D" type="Node2D" unique_id=987215809]
+script = ExtResource("1_4qwwl")
+
+[node name="Imcookinanditsageesenbo" type="Sprite2D" parent="." unique_id=1994535654]
+position = Vector2(578.5, 326)
+scale = Vector2(2.4229167, 2.725)
+texture = ExtResource("2_obosj")
+
+[node name="Label" type="Label" parent="." unique_id=2058936767]
+offset_left = 575.0
+offset_top = 196.0
+offset_right = 860.0
+offset_bottom = 245.0
+text = "Made by
+Niko Hartman
+Charles Thompsom
+"
+
+[node name="Label2" type="Label" parent="." unique_id=589980881]
+visible = false
+offset_left = 645.0
+offset_top = 358.0
+offset_right = 685.0
+offset_bottom = 381.0
+text = "RIP Niko's R key
+2026-2026"
