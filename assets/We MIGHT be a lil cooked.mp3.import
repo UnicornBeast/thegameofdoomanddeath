@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://hkbwpxlbllhs"
+path="res://.godot/imported/We MIGHT be a lil cooked.mp3-c3f9aeddc16bfa25fcd2d91349b5c957.mp3str"
+
+[deps]
+
+source_file="res://assets/We MIGHT be a lil cooked.mp3"
+dest_files=["res://.godot/imported/We MIGHT be a lil cooked.mp3-c3f9aeddc16bfa25fcd2d91349b5c957.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

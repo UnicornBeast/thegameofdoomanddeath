@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://wl4kf4yqduu4" path="res://main_menu.gd" id="1_eiy7p"]
 [ext_resource type="Texture2D" uid="uid://ukgt62587cn3" path="res://assets/Imcookinanditsageesenbo.png" id="1_i26rj"]
+[ext_resource type="AudioStream" uid="uid://hkbwpxlbllhs" path="res://assets/We MIGHT be a lil cooked.mp3" id="3_h7a2f"]
 
 [node name="Node2D" type="Node2D" unique_id=1685822894]
 script = ExtResource("1_eiy7p")
@@ -33,5 +34,7 @@ offset_bottom = 254.0
 text = "HyperDroids"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1493630491]
+stream = ExtResource("3_h7a2f")
+autoplay = true
 
 [connection signal="pressed" from="Credits" to="." method="_on_credits_pressed"]
