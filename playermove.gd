@@ -1,14 +1,22 @@
-extends CharacterBody2D
+extends Node2D
 
+
+var point1 = Vector2(0,648/2)
+var color = Color.LIGHT_GRAY
+var width = 2
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	var player = get_node("Player")
+	player.health = 3;
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	queue_redraw()
 	
 func _physics_process(delta: float) -> void:
-	position = get_global_mouse_position()
+	pass
+func _draw():
+	var player = get_node("Player")
+	draw_line(point1,player.position,color,width)
