@@ -18,7 +18,7 @@ offset_right = 860.0
 offset_bottom = 245.0
 text = "Made by
 Niko Hartman
-Charles Thompsom
+Charles Thomson
 "
 
 [node name="Label2" type="Label" parent="." unique_id=589980881]
