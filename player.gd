@@ -6,7 +6,8 @@ extends CharacterBody2D
 
 func _physics_process(delta):
 	if alive:
-		position = get_global_mouse_position();
+		velocity = position.direction_to(get_global_mouse_position()) * Vector2(abs(position.x - get_global_mouse_position().x),abs(position.y - get_global_mouse_position().y));
+		var collision = move_and_collide(velocity*delta)
 	else:
 		var par = get_node("..")
 		var target = par.point1

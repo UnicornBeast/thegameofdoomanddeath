@@ -21,6 +21,9 @@ func _ready() -> void:
 func _bullet() -> void:
 	bulletSprite.visible = true
 	bullet.position.x -= bulletSpeed*get_process_delta_time()
+func _notbullet() -> void:
+	bulletSprite.visible = false
+	bullet.position.x = ship.position.x
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -28,9 +31,11 @@ func _process(delta: float) -> void:
 	queue_redraw()
 	ship.position.x -= shipSpeed*delta
 	if Input.is_action_just_pressed("BulletTest"):
-		doBullet = true
+		doBullet = not doBullet
 	if doBullet:
 		_bullet()
+	else:
+		_notbullet()
 	
 #Gets input events.
 func _input(event):
