@@ -16,6 +16,7 @@ size = Vector2(12, 15)
 script = ExtResource("1_4hor2")
 
 [node name="Imcookinanditsageesenbo" type="Sprite2D" parent="." unique_id=1273964475]
+visible = false
 position = Vector2(562.5, 322)
 scale = Vector2(2.4104166, 2.7083333)
 texture = ExtResource("2_qg288")
@@ -36,9 +37,14 @@ position = Vector2(806, 349)
 shape = SubResource("RectangleShape2D_tadfv")
 
 [node name="BulletSprite" type="Sprite2D" parent="Enemy/EnemyBullet" unique_id=1578441714]
-visible = false
 position = Vector2(-0.24993896, 0.125)
 scale = Vector2(0.12890609, 0.15429679)
 texture = ExtResource("3_4hor2")
 
 [node name="Node2D" parent="." unique_id=1958953829 instance=ExtResource("3_yv4n1")]
+
+[node name="Timer" type="Timer" parent="." unique_id=791583654]
+wait_time = 3.409
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

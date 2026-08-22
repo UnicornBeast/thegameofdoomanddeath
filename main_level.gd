@@ -2,6 +2,8 @@ extends Node2D
 
 @export var shipSpeed = 25
 @export var bulletSpeed = 175
+@export var enemyHealth = 25
+@export var bossHealth = 50
 @onready var bulletSprite = $Enemy/EnemyBullet/BulletSprite
 @onready var bullet = $Enemy/EnemyBullet
 @onready var shipSprite = $Enemy/Ship/ShipSprite
@@ -30,8 +32,6 @@ func _notbullet() -> void:
 func _process(delta: float) -> void:
 	queue_redraw()
 	ship.position.x -= shipSpeed*delta
-	if Input.is_action_just_pressed("BulletTest"):
-		doBullet = not doBullet
 	if doBullet:
 		_bullet()
 	else:
@@ -54,3 +54,10 @@ func _draw():
 	var player = get_node("Node2D/Player")
 	#Like the healthbar!
 	draw_rect(Rect2(Vector2(50,50),Vector2(player.health*10,10)),Color.LIGHT_GREEN)
+	
+func _enemyDamage() -> void:
+	pass
+
+
+func _on_timer_timeout() -> void:
+	doBullet = not doBullet
