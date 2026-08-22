@@ -11,6 +11,9 @@ size = Vector2(72, 64)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p84dd"]
 size = Vector2(12, 15)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0hv8a"]
+size = Vector2(269, 231)
+
 [node name="Node2D" type="Node2D" unique_id=205000795]
 script = ExtResource("1_ajhvs")
 
@@ -63,6 +66,17 @@ autostart = true
 [node name="Timer2" type="Timer" parent="." unique_id=2016893033]
 wait_time = 2.229
 autostart = true
+
+[node name="Area2D" type="Area2D" parent="." unique_id=270792261]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=183560077]
+position = Vector2(879, 301)
+shape = SubResource("RectangleShape2D_0hv8a")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=1504996049]
+position = Vector2(883, 297)
+scale = Vector2(8.562501, 7.40625)
+texture = ExtResource("2_6v8pq")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]

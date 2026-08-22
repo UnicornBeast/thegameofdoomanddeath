@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cp5hvkl2jyquw"]
+
+[ext_resource type="Script" uid="uid://c7deapuhh44jt" path="res://select.gd" id="1_catev"]
+
+[node name="Node2D" type="Node2D" unique_id=1260655063]
+script = ExtResource("1_catev")
+
+[node name="Button" type="Button" parent="." unique_id=148937864]
+offset_left = 172.0
+offset_top = 155.0
+offset_right = 336.0
+offset_bottom = 188.0
+text = "single enemy"
+
+[node name="Button2" type="Button" parent="." unique_id=1791871924]
+offset_left = 524.0
+offset_top = 165.0
+offset_right = 789.0
+offset_bottom = 208.0
+text = "boss enemy"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
