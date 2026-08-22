@@ -17,7 +17,7 @@ offset_left = 391.0
 offset_top = 330.0
 offset_right = 756.0
 offset_bottom = 386.0
-text = "Level Selector"
+text = "play game"
 
 [node name="Credits" type="Button" parent="." unique_id=722181677]
 offset_left = 498.0
@@ -37,4 +37,5 @@ text = "HyperDroids"
 stream = ExtResource("3_h7a2f")
 autoplay = true
 
+[connection signal="pressed" from="LevelSelector" to="." method="_on_level_selector_pressed"]
 [connection signal="pressed" from="Credits" to="." method="_on_credits_pressed"]
